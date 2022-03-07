@@ -76,8 +76,7 @@ async function delay(ms) {
 async function handleCreateRace() {
   // render starting UI
   const { player_id, track_id } = store;
-  console.log('file: index.js | line 81 | player_id', player_id);
-  console.log('file: index.js | line 81 | track_id', track_id);
+
   renderAt('#race', renderRaceStartView(track_id, player_id)); // correct??? Only Sending 1 player?
 
   const race = await createRace(player_id, track_id);
